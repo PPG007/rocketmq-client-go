@@ -18,6 +18,7 @@ limitations under the License.
 package producer
 
 import (
+	"github.com/PPG007/rocketmq-client-go/v2/rlog"
 	"hash/fnv"
 	"math/rand"
 	"sync"
@@ -39,6 +40,32 @@ func NewManualQueueSelector() QueueSelector {
 
 func (manualQueueSelector) Select(message *primitive.Message, queues []*primitive.MessageQueue) *primitive.MessageQueue {
 	return message.Queue
+}
+
+type idQueueSelector struct {
+}
+
+func NewIdQueueSelector() QueueSelector {
+	return new(idQueueSelector)
+}
+
+func (f idQueueSelector) Select(message *primitive.Message, queues []*primitive.MessageQueue) *primitive.MessageQueue {
+	qSize := len(queues)
+	qIndex := message.Queue.QueueId
+	if qIndex < 0 {
+		qIndex = 0
+		rlog.Warning("queue index out of range and has been reset", map[string]interface{}{
+			"QueueSize":        qSize,
+			"ChosenQueueIndex": qIndex,
+		})
+	} else if qIndex >= qSize {
+		qIndex = qSize - 1
+		rlog.Warning("queue index out of range and has been reset", map[string]interface{}{
+			"QueueSize":        qSize,
+			"ChosenQueueIndex": qIndex,
+		})
+	}
+	return queues[qIndex]
 }
 
 // randomQueueSelector choose a random queue each time.

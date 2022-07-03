@@ -3,3 +3,4 @@ vendor/
 coverage.txt
 examples/test
 /.vscode
+main

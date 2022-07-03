@@ -216,6 +216,10 @@ func (p *defaultProducer) Request(ctx context.Context, timeout time.Duration, ms
 	return requestResponseFuture.WaitResponseMessage(msg)
 }
 
+func (p *defaultProducer) GetTopicQueueList(topic string) []*primitive.MessageQueue {
+	return p.tryToFindTopicPublishInfo(topic).MqList
+}
+
 // RequestAsync  Async Send messages to consumer
 func (p *defaultProducer) RequestAsync(ctx context.Context, timeout time.Duration, callback internal.RequestCallback, msg *primitive.Message) error {
 	if err := p.checkMsg(msg); err != nil {
