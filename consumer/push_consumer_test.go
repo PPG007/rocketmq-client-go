@@ -19,11 +19,12 @@ package consumer
 
 import (
 	"context"
-	"github.com/apache/rocketmq-client-go/v2/rlog"
 	"testing"
 
-	"github.com/apache/rocketmq-client-go/v2/internal"
-	"github.com/apache/rocketmq-client-go/v2/primitive"
+	"github.com/PPG007/rocketmq-client-go/v2/rlog"
+
+	"github.com/PPG007/rocketmq-client-go/v2/internal"
+	"github.com/PPG007/rocketmq-client-go/v2/primitive"
 	"github.com/golang/mock/gomock"
 	. "github.com/smartystreets/goconvey/convey"
 )

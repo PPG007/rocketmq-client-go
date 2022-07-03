@@ -23,10 +23,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/apache/rocketmq-client-go/v2/internal"
-	"github.com/apache/rocketmq-client-go/v2/internal/remote"
-	"github.com/apache/rocketmq-client-go/v2/primitive"
-	"github.com/apache/rocketmq-client-go/v2/rlog"
+	"github.com/PPG007/rocketmq-client-go/v2/internal"
+	"github.com/PPG007/rocketmq-client-go/v2/internal/remote"
+	"github.com/PPG007/rocketmq-client-go/v2/primitive"
+	"github.com/PPG007/rocketmq-client-go/v2/rlog"
 )
 
 type Admin interface {

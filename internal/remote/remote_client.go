@@ -26,9 +26,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/apache/rocketmq-client-go/v2/primitive"
+	"github.com/PPG007/rocketmq-client-go/v2/primitive"
 
-	"github.com/apache/rocketmq-client-go/v2/rlog"
+	"github.com/PPG007/rocketmq-client-go/v2/rlog"
 )
 
 type ClientRequestFunc func(*RemotingCommand, net.Addr) *RemotingCommand

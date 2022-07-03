@@ -22,9 +22,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/apache/rocketmq-client-go/v2/internal"
-	"github.com/apache/rocketmq-client-go/v2/internal/utils"
-	"github.com/apache/rocketmq-client-go/v2/primitive"
+	"github.com/PPG007/rocketmq-client-go/v2/internal"
+	"github.com/PPG007/rocketmq-client-go/v2/internal/utils"
+	"github.com/PPG007/rocketmq-client-go/v2/primitive"
 )
 
 // WithTrace support rocketmq trace: https://github.com/apache/rocketmq/wiki/RIP-6-Message-Trace.

@@ -23,13 +23,13 @@ import (
 	"sync"
 	"sync/atomic"
 
-	errors2 "github.com/apache/rocketmq-client-go/v2/errors"
+	errors2 "github.com/PPG007/rocketmq-client-go/v2/errors"
 
 	"github.com/pkg/errors"
 
-	"github.com/apache/rocketmq-client-go/v2/internal"
-	"github.com/apache/rocketmq-client-go/v2/primitive"
-	"github.com/apache/rocketmq-client-go/v2/rlog"
+	"github.com/PPG007/rocketmq-client-go/v2/internal"
+	"github.com/PPG007/rocketmq-client-go/v2/primitive"
+	"github.com/PPG007/rocketmq-client-go/v2/rlog"
 )
 
 type PullConsumer interface {

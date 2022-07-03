@@ -18,13 +18,14 @@ package primitive
 
 import (
 	"fmt"
-	"github.com/apache/rocketmq-client-go/v2/rlog"
 	"io/ioutil"
 	"net"
 	"net/http"
 	"os"
 	"strings"
 	"testing"
+
+	"github.com/PPG007/rocketmq-client-go/v2/rlog"
 
 	. "github.com/smartystreets/goconvey/convey"
 )

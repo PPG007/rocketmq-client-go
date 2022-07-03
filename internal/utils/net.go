@@ -20,10 +20,11 @@ package utils
 import (
 	"bytes"
 	"fmt"
-	"github.com/apache/rocketmq-client-go/v2/errors"
 	"net"
 	"strconv"
 	"time"
+
+	"github.com/PPG007/rocketmq-client-go/v2/errors"
 )
 
 var (
